@@ -1,0 +1,67 @@
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1>Product Details</h1>
+    <div class="d-flex">
+      <button routerLink="" class="btn btn-danger mx-3">Logout</button>
+    </div>
+  </div>
+</nav>
+<div class="back">
+  <a routerLink="/home">Back</a>
+</div>
+<div class="container-fluid">
+  <!--.container-fluid (full-width) used for proper alignment and padding -->
+  <!--Form -->
+  <!--rows are create for horizontal groups of columns-->
+  <div class="row">
+    <div class="col-xs-6" id="div1">
+      <form name="EnrollmentForm" method="post" class="form-horizontal">
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-5">
+              <img src="{{ product.image }}" width="120%" alt="" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-4 fadeIn" id="div2">
+      <div class="m-5 row">
+        <table>
+          <thead>
+            <tr>
+              <h5
+                style="
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 50ch;
+                "
+              >
+                <strong>Brand:</strong>&nbsp;{{ product.brand }}
+              </h5>
+              <br />
+              <h5
+                style="
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 50ch;
+                "
+              >
+                <strong>Description:</strong>&nbsp;{{ product.description }}
+              </h5>
+              <br />
+              <h5><strong>Price:</strong> ₹{{ product.price }}</h5>
+              <br />
+              <h5>
+                <strong>Serviceability:</strong> {{ product.serviceability }}
+              </h5>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

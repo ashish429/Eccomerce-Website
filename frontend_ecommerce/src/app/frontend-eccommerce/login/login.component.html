@@ -1,0 +1,82 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous"
+/>
+<div class="d-flex flex-row justify-content-center body">
+  <div class="row">
+    <div class="col-md">
+      <form [formGroup]="loginData">
+        <div class="sign-in"></div>
+        <div class="form-group">
+          <br />
+          <label id="words_1" for="exampleInputEmail1">Email*</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            [(ngModel)]="user.email"
+            formControlName="email"
+            [class.error]="
+              loginData.controls['email'].dirty &&
+              loginData.hasError('required', 'email')
+            "
+            placeholder="Enter email"
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              loginData.controls['email'].dirty &&
+              loginData.hasError('required', 'email')
+            "
+            >*email is required</span
+          >
+        </div>
+        <div class="form-group">
+          <label id="words_2" for="exampleInputPassword1">Password*</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+            formControlName="password"
+            [class.error]="
+              loginData.controls['password'].dirty &&
+              loginData.hasError('required', 'password')
+            "
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              loginData.controls['password'].dirty &&
+              loginData.hasError('required', 'password')
+            "
+            >*password is required</span
+          >
+        </div>
+        <div class="form-group">
+          <button
+            type="submit"
+            (click)="loginUser()"
+            class="btn btn-primary"
+            id="sign-in"
+          >
+            Log in</button
+          ><br />
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="sign-up"
+            routerLink="/sign-up"
+          >
+            Create a Account
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

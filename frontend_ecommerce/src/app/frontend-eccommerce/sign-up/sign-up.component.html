@@ -1,0 +1,107 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous"
+/>
+<div class="d-flex flex-row justify-content-center body">
+  <div class="row">
+    <div class="col-md">
+      <form [formGroup]="userData" (ngSubmit)="onSubmit()">
+        <div class="sign-in"></div>
+        <div class="form-group">
+          <br />
+          <label id="words_1" for="exampleInputEmail1">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            formControlName="email"
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              userData.controls['email'].dirty &&
+              userData.hasError('required', 'email')
+            "
+            >*Email is required</span
+          >
+        </div>
+        <div class="form-group">
+          <br />
+          <label id="words_2" for="exampleInputFirstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputFirstName"
+            aria-describedby="firstnameHelp"
+            placeholder="Enter first name"
+            formControlName="fname"
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              userData.controls['fname'].dirty &&
+              userData.hasError('required', 'fname')
+            "
+            >*First Name is required</span
+          >
+        </div>
+        <div class="form-group">
+          <br />
+          <label id="words_2" for="exampleInputLastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputLastName"
+            aria-describedby="lastnameHelp"
+            placeholder="Enter last name"
+            formControlName="lname"
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              userData.controls['lname'].dirty &&
+              userData.hasError('required', 'lname')
+            "
+            >*Last Name is required</span
+          >
+        </div>
+        <div class="form-group">
+          <label id="words_2" for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              userData.controls['password'].dirty &&
+              userData.hasError('required', 'password')
+            "
+            >*Password is required</span
+          >
+        </div>
+        <div class="form-group">
+          <button
+            [disabled]="userData.invalid"
+            type="submit"
+            class="btn btn-primary"
+          >
+            Create</button
+          ><br />
+          <a routerLink="/login">Already have a Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

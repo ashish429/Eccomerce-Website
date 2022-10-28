@@ -1,0 +1,60 @@
+
+.btn {
+  width: 350px;
+  margin-top: 18px;
+}
+
+form {
+  align-items: center;
+  border: 1px solid lightgrey;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 16px;
+  padding-bottom: 25px;
+  border-radius: 5px;
+  margin-top: 43px;
+}
+
+#words_1 {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#words_2 {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#words_3 {
+  font: 7px;
+}
+
+.conditions {
+  font-size: 8px;
+  color: blue;
+  margin-top: 28px;
+  z-index: 2;
+}
+
+.footer_1 {
+  width: max;
+  height: 350px;
+  background-color: #fff;
+  margin-top: 28px;
+
+}
+
+#exampleCheck1 {
+  margin-left: 3px;
+  margin-top: 10px;
+}
+
+#red-button {
+  background-color: lightgrey;
+  border: black;
+}
+.body{
+  background-image: url("src/assets/images/office.jpg");
+  height:610px;
+  margin-top: -10px;
+}

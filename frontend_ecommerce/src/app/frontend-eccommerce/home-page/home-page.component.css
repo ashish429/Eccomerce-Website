@@ -1,0 +1,67 @@
+h2
+{
+  margin: 58px 10;
+}
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+
+}
+footer {
+	border: 1px solid black;
+	text-align: center;
+	color: white;
+	background: blueviolet;
+	padding: 0px;
+ 	height: auto;
+ 	width: auto;
+}
+
+.search{
+  border-radius: 2px;
+  border-color: white;
+}
+.form-control {
+  border-radius: 5px;
+  border-right: 100px;
+  width: 700px;
+  margin-left: 80px;
+  margin-right: 1px;
+}
+.tab{
+  border-radius: 5px;
+  border-color: white;
+  margin-left: 20px;
+  margin-right: 70px;
+
+}
+
+#logout{
+  border-radius: 5px;
+  border-color: white;
+  margin-right: 40px;
+}
+
+.cart{
+  margin-left: 70px;
+}
+.body{
+  background-image: url("src/assets/images/office.jpg");
+  height: 650 px;
+  background-size:100%;
+  background-size:cover;
+}
+a,
+a label {
+    cursor: pointer;
+}
+
+
+
